@@ -1,3 +1,12 @@
+## What's New
+
+## Installing Amplify
+`npm install -g @aws-amplify/cli`
+`amplify configure`
+`amplify init`
+`amplify add hosting`
+`amplify publish`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

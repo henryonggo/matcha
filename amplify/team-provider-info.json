@@ -1,0 +1,14 @@
+{
+    "matcha": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-matcha-matcha-04356-authRole",
+            "UnauthRoleArn": "arn:aws:iam::500557093814:role/amplify-matcha-matcha-04356-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::500557093814:role/amplify-matcha-matcha-04356-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-matcha-matcha-04356-deployment",
+            "UnauthRoleName": "amplify-matcha-matcha-04356-unauthRole",
+            "StackName": "amplify-matcha-matcha-04356",
+            "StackId": "arn:aws:cloudformation:us-east-2:500557093814:stack/amplify-matcha-matcha-04356/6abb0070-050f-11ea-9cc7-064e3beebd9c"
+        }
+    }
+}
