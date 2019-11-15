@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "matcha",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authmatcha13803112",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

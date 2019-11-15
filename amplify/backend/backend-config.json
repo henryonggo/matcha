@@ -5,5 +5,28 @@
 			"providerPlugin": "awscloudformation"
 		}
 	},
-	"auth": {}
+	"auth": {
+		"matcha13803112": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"api": {
+		"matcha": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authmatcha13803112"
+						}
+					}
+				}
+			}
+		}
+	}
 }
