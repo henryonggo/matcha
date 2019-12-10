@@ -6,6 +6,8 @@ import awsconfig from './aws-exports';
 import { withAuthenticator } from 'aws-amplify-react';
 import * as queries from './graphql/queries';
 import * as mutations from './graphql/mutations';
+import Dashboard from './components/dashboard.component';
+
 Auth.configure(awsconfig);
 API.configure(awsconfig);
 
@@ -31,33 +33,40 @@ function App() {
   // }); // Get specific stuff from DB through API.
   // console.log(oneTask);
 
-  Auth.currentAuthenticatedUser({
-    bypassCache: false
-  }).then(function(user) {
-    console.log("User: " + JSON.stringify(user));
-    const task = {name: user['username'], description: "new task"};
-    const newTask = API.graphql(graphqlOperation(mutations.createTask, {input: task}));
-  }).catch(err => console.log(err));
+  // Auth.currentAuthenticatedUser({
+  //   bypassCache: false
+  // }).then(function(user) {
+  //   console.log("User: " + JSON.stringify(user));
+  //   const task = {name: user['username'], description: "new task"};
+  //   const newTask = API.graphql(graphqlOperation(mutations.createTask, {input: task}));
+  // }).catch(err => console.log(err));
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Dashboard />
   );
 }
 
-export default withAuthenticator(App, {includeGreetings: true});
+const signUpConfig = {
+  // hiddenDefaults: ['username'],
+  // signUpFields: [
+  //   {
+  //     label: 'Email',
+  //     key: 'username', // !!!
+  //     required: true,
+  //     displayOrder: 1,
+  //     type: 'string',
+  //     custom: false
+  //   },
+  //   {
+  //     label: 'Password',
+  //     key: 'password',
+  //     required: true,
+  //     displayOrder: 2,
+  //     type: 'password',
+  //     custom: false
+  //   }
+  // ]
+};
+
+export default withAuthenticator(App, { includeGreetings: true, signUpConfig });
 // export default App;

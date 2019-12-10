@@ -10,6 +10,7 @@
 `amplify push`
 `npm add aws-amplify aws-amplify-react`
 `amplify add api`
+`npm install node-sass --save`
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
