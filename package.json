@@ -5,10 +5,10 @@
   "dependencies": {
     "aws-amplify": "^6.17.0",
     "aws-amplify-react": "^2.5.4",
-    "node-sass": "^4.13.0",
+    "node-sass": "^9.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
